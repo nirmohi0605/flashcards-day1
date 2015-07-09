@@ -15,7 +15,8 @@
             <ul class="flash-card-answers">
                 <li ng-click="answerQuestion(answer)" class="flash-card-answer" ng-repeat='answer in flashcard.answers'>{{ answer.text }}</li>
             </ul>
-            <h2 class="answer-feedback" ng-show="answered" ng-class='{ correct: answeredCorrectly, incorrect:!answeredCorrectly}'>
+            <!-- <h2 class="answer-feedback" ng-show="answered" ng-class='{ correct: answeredCorrectly, incorrect:!answeredCorrectly}'> -->
+            <h2 class="answer-feedback" ng-show="answered" ng-class="answeredCorrectly? ' correct ': 'incorrect '">
        			<span ng-show="answeredCorrectly">Yeah, you got it right!</span>
     			<span ng-show="!answeredCorrectly">Nope, you got it wrong.</span>
 			</h2>
